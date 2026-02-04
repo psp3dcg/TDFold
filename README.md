@@ -22,6 +22,8 @@ cp your_env_path/diffusers/pipelines/stable_diffusion/safety_checker.py your_env
 cp TDFold_code/safety_checker.py your_env_path/diffusers/pipelines/stable_diffusion/safety_checker.py
 ```
 
+3. download the model parameters from https://zenodo.org/records/18479247
+
 ## Usage example
 ---------------
 1. Predict the protein structures:
