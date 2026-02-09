@@ -33,7 +33,7 @@ python -u test_TDFold.py [FASTA_folder_path] [data_write_path] [SD_model_path] [
 -FASTA_folder_path: the path of folder containing FASTA files
 -data_write_path: the path of folder to write generated data
 -SD_model_path: the path of Stable Diffusion pretrained model
--text_encoder_LoRA_model_path: the path of pdb100 dataset
+-text_encoder_LoRA_model_path: the path of text LoRA model
 -UNet_dis_LoRA_model_path: the path of UNet LoRA model for pairwise CB distance matrix
 -UNet_omega_LoRA_model_path: the path of UNet LoRA model for pairwise omega dihedral matrix
 -UNet_theta_LoRA_model_path: the path of UNet LoRA model for pairwise theta dihedral matrix
