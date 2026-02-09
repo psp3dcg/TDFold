@@ -22,9 +22,7 @@ cp your_env_path/diffusers/pipelines/stable_diffusion/safety_checker.py your_env
 cp TDFold_code/safety_checker.py your_env_path/diffusers/pipelines/stable_diffusion/safety_checker.py
 ```
 
-3. Download the stable diffusion (SD) model parameters from [stable-diffusion](https://github.com/CompVis/stable-diffusion).
-
-4. Download the LoRA parameters from [Zenodo](https://zenodo.org/records/18479247)
+3. Download the stable diffusion (SD) model parameters from [stable-diffusion](https://github.com/CompVis/stable-diffusion) and the LoRA parameters from [Zenodo](https://zenodo.org/records/18530072).
 
 ## Usage example
 ---------------
