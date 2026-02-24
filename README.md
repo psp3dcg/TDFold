@@ -2,26 +2,30 @@
 
 ## Folder Organization
 ```
-.
-├── .github
-│   └── workflows
-│       ├── docs.yaml
-│       ├── pre-commit.yaml
-│       ├── release.yaml
-│       └── test.yaml
-├── .gitignore
-├── .pre-commit-config.yaml
-├── CHANGELOG.md
-├── CONTRIBUTING.md
-├── LICENSE
-├── README.md
-├── README.org
-├── pyproject.toml
-├── src
-│   └── minimal_python_project_skeleton
-│       └── __init__.py
-└── test
-    └── test_func.py
+├── README.md                # Project documentation
+├── LICENSE                  # License file
+├── TDFold_env_requirements.txt         # Python dependencies
+│
+├── data/                    # Dataset files
+│   ├── examples/           # Example input files
+│   └── README.md           # Data description
+│
+├── src/                     # Source code
+│   ├── models/             # Model architectures
+│   ├── utils/              # Helper functions
+│   └── config.py           # Configuration settings
+│
+├── scripts/                 # Run scripts
+│   ├── train.sh            # Training script
+│   ├── predict.sh          # Inference script
+│   └── reproduce.sh        # Reproduction script
+│
+├── notebooks/               # Jupyter notebooks
+│   └── demo.ipynb          # Usage demonstration
+│
+└── outputs/                 # Generated results
+    ├── checkpoints/        # Model weights
+    └── logs/               # Training logs
 ```  
 
 ## Instructions on code implementation for reproducing results
