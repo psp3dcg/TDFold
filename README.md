@@ -1,6 +1,7 @@
 ## TDFold - Pytorch Implementation
 
 ## Folder Organization
+```
 .
 ├── .github
 │   └── workflows
@@ -20,7 +21,8 @@
 │   └── minimal_python_project_skeleton
 │       └── __init__.py
 └── test
-    └── test_func.py     
+    └── test_func.py
+```  
 
 ## Instructions on code implementation for reproducing results
 
