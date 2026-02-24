@@ -1,11 +1,11 @@
 ## TDFold - Pytorch Implementation
 
 ## Folder Organization
-├── README.md                 # readme file
-├── LICENSE                   # 
-├── TDFold_env_requirements.txt # Python environment dependencies of TDFold model
+├── README.md                 # readme file/
+├── LICENSE                   /
+├── TDFold_env_requirements.txt # Python environment dependencies of TDFold model/
 │
-├── all_atom_fold/            # the code for refining protein all-atom structure
+├── all_atom_fold/            # the code for refining protein all-atom structure/
 │   ├── raw/                  # 
 │   ├── processed/            # 
 │   └── examples/             # 
