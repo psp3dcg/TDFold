@@ -2,30 +2,73 @@
 
 ## Folder Organization
 ```
-├── README.md                # Project documentation
-├── LICENSE                  # License file
-├── TDFold_env_requirements.txt         # Python dependencies
+├── LICENSE                            # License file
+├── README.md                          # Project documentation
+├── TDFold_env_requirements.txt        # Python dependencies of TDFold model
+├── data_pipeline.py                   # Datatype defination of torch geometric
+├── generate_TDFold_data.py            # Main generating process of protein data
+├── generate_inter_residue_geometry.py # Generating process of 2D geometric template
+├── generate_TDFold_data.py            # Main generating process of protein data
+├── generate_pt_file.py                # Generating process of protein graph data
+├── modeling_clip.py                   # New modeling_clip to make text encoder support longer text prompt (>77 tokens)
+├── safety_checker.py                  # New safety_checker to avoid stable diffusion model'check for prompt
+├── generate_TDFold_data.py            # Main generating process of protein data
 │
-├── data/                    # Dataset files
-│   ├── examples/           # Example input files
-│   └── README.md           # Data description
+├── all_atom_fold/                     # Refining protein all-atom structure
+│   ├── __init__.py/                   # 
+│   ├── add_force_label.py/            # Adding the force information to protein graph data
+│   ├── combine_bb_sc.py/              # Combining the backbone and sidechain
+│   ├── energy_minimizer.py/           # Energy minimizer
+│   ├── loss_func.py/                  # Harmonic energy loss function
+│   ├── force_file/                    # Force information
+│   └── unfold_aa                      # Unfolded structures of 20 amino acids
 │
-├── src/                     # Source code
-│   ├── models/             # Model architectures
-│   ├── utils/              # Helper functions
-│   └── config.py           # Configuration settings
+├── atom_graph/                        # Building the torch geometric atom-level graph data for protein
+│   ├── __init__.py/                   # 
+│   ├── add_bond_type.py/              # Adding the type of atom bond
+│   ├── generate_atom_data.py/         # Building process of atom-level graph data
+│   ├── generate_protein_graph.py/     # Building-relative functions of grpah data
+│   └── amino acid                     # The information (e.g., amino acid type) of 20 amino acids
 │
-├── scripts/                 # Run scripts
-│   ├── train.sh            # Training script
-│   ├── predict.sh          # Inference script
-│   └── reproduce.sh        # Reproduction script
+├── confs/                             # Training configuration
+│   ├── __init__.py/                   # 
+│   └── util.py                        # Training configuration parameters
 │
-├── notebooks/               # Jupyter notebooks
-│   └── demo.ipynb          # Usage demonstration
+├── examples/                          # The generation example python files of stable diffusion models
 │
-└── outputs/                 # Generated results
-    ├── checkpoints/        # Model weights
-    └── logs/               # Training logs
+├── model/                             # The python files of sequence-geometry collaborative learning (SCL) model
+│   ├── __init__.py/                   #
+│   ├── Attention_module_w_str.py/     # Attention computation used in transformer of TDFold
+│   ├── DistancePredictor.py/          # Predicting the inter-residue distance and orientations of the input protein
+│   ├── Embeddings.py/                 # Making embeddings of the protein sequence
+│   ├── InitStrGenerator.py/           # Predicting the initial backbone structure of protein
+│   ├── LDDT_torch.py/                 # Pytorch implementation of local distance difference test (LDDT)
+│   ├── SE3_network.py/                # SE(3)-EGNN for refining protein 3D structure
+│   ├── Transformer.py/                # Transformer model used in TDFold
+│   ├── aa_info_util.py/               # 20 amino acids information
+│   ├── build_graph.py/                # Building the residue-level graph data and making residue and atom feature fusion
+│   ├── kinematics.py/                 # Transforming the coordinates to distances and orientations
+│   ├── parse_protein_info.py/         # Parsing the protein sequence and 2D geometric template information
+│   ├── parsers.py/                    # homology parser used in the version of TDFold with MSA
+│   ├── predict_network.py/            # Main process of protein structure prediction 
+│   ├── refine_net.py/                 # Refining the backbone structure with SE3 network
+│   ├── resnet.py/                     # Unsymmetric CNN used in hybrid CNN
+│   ├── rigid_transform.py/            # Rigid alignment of predicted and true protein structure before computing RMSD loss
+│   └── sym_cnn.py                     # Symmetric CNN in hybrid CNN
+│
+├── my_diffusers/                      # The pytorch implementation of stable diffusion model
+│
+├── scripts/                           # The script files of stable diffusion model
+│
+├── src/                               # The python file of diffusers
+│
+├── tests/                             # The test python files of stable diffusion model
+│
+└── utils/                             # 
+    ├── aa_info_util.py/               # amino acid information
+    ├── equivariant_attention/         # Equivariant attentions of SE3-EGNN
+    ├── generate_pdb.py/               # Generating pdb file based on predicted coordinates
+    └── loss_func.py/                  # Training loss functions of TDFold
 ```  
 
 ## Instructions on code implementation for reproducing results
