@@ -6,53 +6,53 @@
 ├── TDFold_env_requirements.txt # Python environment dependencies of TDFold model
 │
 ├── all_atom_fold/            # the code for refining protein all-atom structure
-│   ├── raw/                  # 原始数据
-│   ├── processed/            # 预处理后的数据
-│   └── examples/             # 示例输入文件
+│   ├── raw/                  # 
+│   ├── processed/            # 
+│   └── examples/             # 
 │
-├── atom_graph/               # 源代码主目录
+├── atom_graph/               
 │   ├── __init__.py
-│   ├── data_loader.py        # 数据加载模块
-│   ├── model/                # 模型定义
+│   ├── data_loader.py        
+│   ├── model/                
 │   │   ├── __init__.py
-│   │   ├── template_diffusion.py  # 模板扩散模型
-│   │   └── layers.py         # 网络层定义
-│   ├── training/             # 训练相关代码
-│   │   ├── train.py          # 主训练脚本
-│   │   └── config.py         # 配置文件
-│   └── utils/                # 工具函数
-│       ├── metrics.py        # 评估指标
-│       └── visualization.py  # 可视化工具
+│   │   ├── template_diffusion.py  
+│   │   └── layers.py         
+│   ├── training/             
+│   │   ├── train.py          
+│   │   └── config.py         
+│   └── utils/                
+│       ├── metrics.py        
+│       └── visualization.py 
 │
-├── confs/                  # 可执行脚本
-│   ├── run_training.sh       # 训练启动脚本
-│   ├── run_inference.sh      # 推理启动脚本
-│   └── reproduce_results.sh  # 一键复现结果脚本
+├── confs/                  
+│   ├── run_training.sh       
+│   ├── run_inference.sh      
+│   └── reproduce_results.sh  
 │
-├── examples/                # Jupyter 实验笔记本
-│   └── demo.ipynb            # 使用示例
+├── examples/                
+│   └── demo.ipynb            
 │
-├── models/                    # 单元测试
+├── models/                    
 │   ├── test_model.py
 │   └── test_data_loader.py
 │
-├── my_diffusers/                     # 额外文档
-│   └── instructions.md       # 详细操作说明
+├── my_diffusers/                    
+│   └── instructions.md       
 │
-├── my_diffusers/                     # 额外文档
-│   └── instructions.md       # 详细操作说明
+├── my_diffusers/                     
+│   └── instructions.md       
 │
-├── my_diffusers/                     # 额外文档
-│   └── instructions.md       # 详细操作说明
+├── my_diffusers/                     
+│   └── instructions.md       
 │
-├── my_diffusers/                     # 额外文档
-│   └── instructions.md       # 详细操作说明
+├── my_diffusers/                     
+│   └── instructions.md       
 │
-└── outputs/                  # 默认输出目录（模型权重、日志等）
-    ├── checkpoints/          # 模型检查点
-    └── logs/                 # 训练日志
+└── outputs/                  
+    ├── checkpoints/          
+    └── logs/                 
 
-## How to reproduce the experimental results
+## Instructions on code implementation for reproducing results
 
 ## 1. Installing the conda environment
 ---------------
