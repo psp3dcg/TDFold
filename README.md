@@ -1,56 +1,10 @@
 ## TDFold - Pytorch Implementation
 
 ## Folder Organization
-├── README.md                 # readme file/
-├── LICENSE                   /
-├── TDFold_env_requirements.txt # Python environment dependencies of TDFold model/
-│
-├── all_atom_fold/            # the code for refining protein all-atom structure/
-│   ├── raw/                  # 
-│   ├── processed/            # 
-│   └── examples/             # 
-│
-├── atom_graph/               
-│   ├── __init__.py
-│   ├── data_loader.py        
-│   ├── model/                
-│   │   ├── __init__.py
-│   │   ├── template_diffusion.py  
-│   │   └── layers.py         
-│   ├── training/             
-│   │   ├── train.py          
-│   │   └── config.py         
-│   └── utils/                
-│       ├── metrics.py        
-│       └── visualization.py 
-│
-├── confs/                  
-│   ├── run_training.sh       
-│   ├── run_inference.sh      
-│   └── reproduce_results.sh  
-│
-├── examples/                
-│   └── demo.ipynb            
-│
-├── models/                    
-│   ├── test_model.py
-│   └── test_data_loader.py
-│
-├── my_diffusers/                    
-│   └── instructions.md       
-│
-├── my_diffusers/                     
-│   └── instructions.md       
-│
-├── my_diffusers/                     
-│   └── instructions.md       
-│
-├── my_diffusers/                     
-│   └── instructions.md       
-│
-└── outputs/                  
-    ├── checkpoints/          
-    └── logs/                 
+data-analysis/
+project1/
+project2/
+README.md               
 
 ## Instructions on code implementation for reproducing results
 
