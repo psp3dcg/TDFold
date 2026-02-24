@@ -81,21 +81,23 @@ conda env create -f TDFold_env python=3.10
 pip install -r TDFold_env_requirements.txt
 ```
 
-## 2. Replacing the conda environment library file
+## 2. Downloading the model parameter file and replacing model library file of conda environment
 ---------------
-1) Replace the clip model library file
+1) Download the stable diffusion (SD) model parameters from [stable-diffusion](https://github.com/CompVis/stable-diffusion) and the LoRA parameters from [Zenodo](https://zenodo.org/records/18530072).
+
+2) Replace the clip model library file of conda environment
 ```
 cp your_env_path/transformers/models/clip/modeling_clip.py your_env_path/transformers/models/clip/modeling_clip_bp.py
 cp TDFold_code/modeling_clip.py your_env_path/transformers/models/clip/modeling_clip.py
 ```
 
-2) Replace the stable diffusion model library file
+3) Replace the safety checker library file of conda environment
 ```
 cp your_env_path/diffusers/pipelines/stable_diffusion/safety_checker.py your_env_path/diffusers/pipelines/stable_diffusion/safety_checker_bp.py
 cp TDFold_code/safety_checker.py your_env_path/diffusers/pipelines/stable_diffusion/safety_checker.py
 ```
 
-3) Download the stable diffusion (SD) model parameters from [stable-diffusion](https://github.com/CompVis/stable-diffusion) and the LoRA parameters from [Zenodo](https://zenodo.org/records/18530072).
+
 
 ## 3. Prediction usage example
 ---------------
