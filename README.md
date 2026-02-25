@@ -85,13 +85,13 @@ pip install -r TDFold_env_requirements.txt
 ---------------
 1) Download the stable diffusion (SD) model parameters from [stable-diffusion](https://github.com/CompVis/stable-diffusion) and the LoRA parameters from [Zenodo](https://zenodo.org/records/18530072).
 
-2) Replace the clip model library file of conda environment
+2) Replace the library file of conda environment for clip model
 ```
 cp your_env_path/transformers/models/clip/modeling_clip.py your_env_path/transformers/models/clip/modeling_clip_bp.py
 cp TDFold_code/modeling_clip.py your_env_path/transformers/models/clip/modeling_clip.py
 ```
 
-3) Replace the safety checker library file of conda environment
+3) Replace the library file of conda environment for safety checker
 ```
 cp your_env_path/diffusers/pipelines/stable_diffusion/safety_checker.py your_env_path/diffusers/pipelines/stable_diffusion/safety_checker_bp.py
 cp TDFold_code/safety_checker.py your_env_path/diffusers/pipelines/stable_diffusion/safety_checker.py
